@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — PDF Reader</title>
+<meta name="description" content="Privacy Policy for the PDF Reader mobile app." />
+<style>
+  :root {
+    --sky-blue: #2F6BFF;
+    --indigo: #6B5CFF;
+    --coral: #FF7A59;
+    --gold: #FFB11A;
+    --ink: #171B2D;
+    --ink-soft: #66708B;
+    --border: #E6EAF4;
+    --card: #FFFFFF;
+    --page: #F7F9FE;
+    --lavender: #F4F6FF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #EEF1FB;
+      --ink-soft: #A5AFCB;
+      --border: #2A3050;
+      --card: #171A2C;
+      --page: #10121F;
+      --lavender: #1B2040;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #EEF1FB;
+    --ink-soft: #A5AFCB;
+    --border: #2A3050;
+    --card: #171A2C;
+    --page: #10121F;
+    --lavender: #1B2040;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--sky-blue), var(--indigo));
+    color: #fff;
+    padding: 48px 20px 40px;
+    text-align: center;
+  }
+  header .icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 30px;
+  }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 800;
+  }
+  header p {
+    margin: 0;
+    opacity: 0.92;
+    font-size: 14px;
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+
+  .meta-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 18px 22px;
+    margin: -28px 0 32px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: center;
+    text-align: center;
+  }
+  .meta-card b { color: var(--ink); }
+
+  nav.toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+  }
+  nav.toc h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 20px;
+    columns: 2;
+  }
+  nav.toc li { margin-bottom: 8px; break-inside: avoid; }
+  nav.toc a {
+    color: var(--sky-blue);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  nav.toc a:hover { text-decoration: underline; }
+
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 26px 28px;
+    margin-bottom: 20px;
+    scroll-margin-top: 20px;
+  }
+  section h2 {
+    font-size: 19px;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  section h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    background: var(--lavender);
+    color: var(--sky-blue);
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  section h3 {
+    font-size: 15px;
+    margin: 18px 0 8px;
+    color: var(--ink);
+  }
+  section p, section li { color: var(--ink-soft); font-size: 15px; }
+  section strong { color: var(--ink); }
+  ul, ol { padding-left: 22px; margin: 10px 0; }
+  li { margin-bottom: 6px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { color: var(--ink); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  td { color: var(--ink-soft); }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--lavender);
+    color: var(--sky-blue);
+  }
+  .note {
+    background: var(--lavender);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin: 14px 0;
+  }
+  .note strong { color: var(--ink); }
+
+  a.inline { color: var(--sky-blue); }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px 50px;
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+  }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+    header h1 { font-size: 24px; }
+    section { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">🌓 Theme</button>
+
+<header>
+  <div class="icon">📄</div>
+  <h1>Privacy Policy</h1>
+  <p><span id="appName">PDF Reader</span> — mobile app for Android &amp; iOS</p>
+</header>
+
+<div class="wrap">
+  <div class="meta-card">
+    <span><b>Effective date:</b> <span id="effectiveDate">September 27, 2026</span></span>
+    <span><b>Developer:</b> Tejas Labs</span>
+    <span><b>Contact:</b> <a class="inline" href="mailto:privacy@tejaslabs.app">privacy@tejaslabs.app</a></span>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#info-we-collect">Information we collect</a></li>
+      <li><a href="#your-documents">Your documents &amp; local data</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#permissions">App permissions</a></li>
+      <li><a href="#ads">Advertising &amp; personalization</a></li>
+      <li><a href="#purchases">Subscriptions &amp; purchases</a></li>
+      <li><a href="#retention">Data retention &amp; deletion</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#choices">Your choices &amp; rights</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <section id="overview">
+    <h2><span class="num">1</span>Overview</h2>
+    <p>
+      PDF Reader ("<strong>the App</strong>", "<strong>we</strong>", "<strong>us</strong>") is a mobile
+      application for viewing, annotating, organizing, and managing PDF documents that already exist
+      on your device. This Privacy Policy explains what information the App and the third-party
+      services it uses collect, how that information is used, and the choices you have.
+    </p>
+    <p>
+      The short version: <strong>your documents never leave your device.</strong> All PDF viewing,
+      annotation, merging, splitting, rotating, reordering, and signing happens locally, on-device.
+      We do not operate a server that stores, scans, or has access to your files. The only data that
+      leaves your device is what's described in this policy — mainly technical/diagnostic data from
+      the third-party services listed below, and purchase data handled directly by Google Play /
+      the App Store.
+    </p>
+  </section>
+
+  <section id="info-we-collect">
+    <h2><span class="num">2</span>Information we collect</h2>
+    <h3>Information you provide directly</h3>
+    <p>
+      The App does not require you to create an account, sign in, or provide any personal
+      information (name, email, phone number) to use it. We do not operate any backend server that
+      stores personal profile information about you.
+    </p>
+    <h3>Information collected automatically</h3>
+    <p>
+      Like most apps that use ads, crash reporting, and in-app purchases, the App relies on
+      third-party SDKs that automatically collect certain technical information. This can include:
+    </p>
+    <ul>
+      <li>Device information (model, manufacturer, OS version, locale, screen size)</li>
+      <li>App diagnostics (crash logs, stack traces, app version, session duration)</li>
+      <li>Advertising identifiers (e.g. Android Advertising ID / Apple's IDFA, where available and permitted)</li>
+      <li>Approximate location (country/region only, derived from IP address, used for ad compliance and localization — never precise GPS location)</li>
+      <li>In-app purchase/subscription status (which plan is active, purchase timestamps) — processed by Google Play / Apple, not by us</li>
+    </ul>
+    <p>
+      We do not use this information to build an advertising profile of you ourselves — it is
+      collected and processed by the third-party providers described in the next section, under
+      their own privacy policies.
+    </p>
+  </section>
+
+  <section id="your-documents">
+    <h2><span class="num">3</span>Your documents &amp; local data</h2>
+    <p>The following stays <strong>only on your device</strong> and is never uploaded by the App:</p>
+    <ul>
+      <li>The content of any PDF you open, import, annotate, merge, split, rotate, reorder, or sign</li>
+      <li>Any highlight, underline, strikethrough, sticky note, or freehand annotation you add</li>
+      <li>Any signature you draw or import from your photo library</li>
+      <li>Your recent-documents list, favorites, and reading position, stored locally in the app's
+        on-device preferences storage</li>
+      <li>The folder you choose to browse in the "Storage" tab (the App only accesses the specific
+        folder you select via the system file picker, not your entire device storage)</li>
+    </ul>
+    <p>
+      If you use the <strong>Share</strong> or <strong>Print</strong> features, the App hands the
+      file to the operating system's native share/print sheet — at that point, where the file goes
+      is controlled by you and by the app or printer you choose, not by us.
+    </p>
+  </section>
+
+  <section id="third-party">
+    <h2><span class="num">4</span>Third-party services</h2>
+    <p>The App integrates the following third-party services. Each operates under its own privacy policy:</p>
+    <table>
+      <thead>
+        <tr><th>Service</th><th>Purpose</th><th>Provider's policy</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Firebase Crashlytics</strong></td>
+          <td>Collects crash reports and error logs so we can fix bugs. Includes device model, OS
+            version, app version, and stack traces — not the content of your documents.</td>
+          <td><a class="inline" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Firebase Remote Config</strong></td>
+          <td>Lets us remotely tune app behavior (e.g. how often ads are shown) without an app
+            update. Involves a Firebase-generated installation identifier, not personal data.</td>
+          <td><a class="inline" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Google AdMob</strong></td>
+          <td>Serves the banner, native, interstitial, and rewarded ads shown to non-Premium users.
+            May use advertising identifiers and approximate location for ad selection and fraud
+            prevention.</td>
+          <td><a class="inline" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Google Play Billing / Apple StoreKit</strong></td>
+          <td>Processes Premium subscription purchases (lifetime/monthly/yearly). Payment details are
+            handled entirely by Google/Apple — we never see or store your payment information.</td>
+          <td>
+            <a class="inline" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> ·
+            <a class="inline" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="permissions">
+    <h2><span class="num">5</span>App permissions</h2>
+    <p>The App requests the following device permissions, only for the stated purpose:</p>
+    <ul>
+      <li><strong>Storage / file access</strong> — to let you pick a PDF to open, or a folder to
+        browse, via the system file picker. The App does not request broad "all files" access; you
+        choose exactly what it can see.</li>
+      <li><strong>Photo library</strong> — only used if you choose to import an existing signature
+        image instead of drawing one.</li>
+      <li><strong>Internet</strong> — required for ads, Remote Config, crash reporting, and
+        processing purchases.</li>
+      <li><strong>In-app billing</strong> — required to offer the optional Premium subscription.</li>
+    </ul>
+  </section>
+
+  <section id="ads">
+    <h2><span class="num">6</span>Advertising &amp; personalization</h2>
+    <p>
+      Free (non-Premium) use of the App is supported by ads served through Google AdMob. Depending
+      on your device settings and region, these ads may be personalized based on your advertising
+      identifier and general interests, or non-personalized. You can control ad personalization at
+      the OS level:
+    </p>
+    <ul>
+      <li><strong>Android:</strong> Settings → Privacy → Ads → "Delete advertising ID" / "Opt out of
+        Ads Personalization".</li>
+      <li><strong>iOS:</strong> Settings → Privacy &amp; Security → Tracking, and Settings → Privacy
+        &amp; Security → Apple Advertising → Personalized Ads.</li>
+    </ul>
+    <p>Purchasing Premium removes all ads from the App entirely.</p>
+  </section>
+
+  <section id="purchases">
+    <h2><span class="num">7</span>Subscriptions &amp; purchases</h2>
+    <p>
+      The App offers an optional Premium unlock (lifetime, monthly, or yearly) that removes ads and
+      unlocks the PDF Tools (merge, split, rotate, reorder, sign, print). All purchases are processed
+      by Google Play or the Apple App Store using the payment method on file with your Google/Apple
+      account. We only receive confirmation of which plan you purchased and its status (active/
+      expired) — never your card or account details.
+    </p>
+  </section>
+
+  <section id="retention">
+    <h2><span class="num">8</span>Data retention &amp; deletion</h2>
+    <p>
+      Your documents, annotations, and library metadata live in local app storage on your device and
+      are deleted automatically if you uninstall the App, or manually via
+      <span class="badge">Profile → Clear Reading History</span> inside the App. Diagnostic data held
+      by Firebase Crashlytics is retained per Google's own retention schedule (typically up to 90
+      days) and is not linked to an identifiable person.
+    </p>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">9</span>Children's privacy</h2>
+    <p>
+      The App is not directed at children under 13 (or the equivalent minimum age in your
+      jurisdiction), and we do not knowingly collect personal information from children. If you
+      believe a child has provided us with personal information, please contact us so we can address
+      it.
+    </p>
+  </section>
+
+  <section id="security">
+    <h2><span class="num">10</span>Security</h2>
+    <p>
+      Because your documents and library data stay on your device rather than on a server we
+      control, the main safeguard is your own device's security (passcode, encryption, OS updates).
+      Data transmitted to the third-party services above (crash reports, ad requests, purchase
+      receipts) is sent over encrypted (HTTPS) connections.
+    </p>
+  </section>
+
+  <section id="choices">
+    <h2><span class="num">11</span>Your choices &amp; rights</h2>
+    <ul>
+      <li><strong>Access/delete local data:</strong> use Profile → Clear Reading History in the App,
+        or uninstall the App, to remove all locally stored library data.</li>
+      <li><strong>Ad personalization:</strong> controlled via your device's OS settings (see
+        "Advertising &amp; personalization" above).</li>
+      <li><strong>Restore purchases:</strong> available from Profile → Restore Purchases.</li>
+      <li>
+        <strong>Regional privacy rights</strong> (e.g. GDPR, CCPA/CPRA): depending on where you live,
+        you may have rights to access, correct, or delete personal data held about you by our
+        third-party providers. Since we don't hold a personal profile ourselves, requests about data
+        collected by Firebase or AdMob are best directed to
+        <a class="inline" href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">Google's own privacy controls</a>,
+        and you're welcome to contact us for anything App-specific.
+      </li>
+    </ul>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">12</span>Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy as the App's features change. We'll update the
+      "Effective date" above when we do. Continued use of the App after a change means you accept
+      the updated policy.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">13</span>Contact us</h2>
+    <p>
+      Questions about this policy or how the App handles data? Reach us at
+      <a class="inline" href="mailto:privacy@tejaslabs.app">privacy@tejaslabs.app</a>.
+    </p>
+    <div class="note">
+      <strong>Note for the developer:</strong> replace the contact email, developer name, and
+      effective date placeholders above with your real details before publishing this page or
+      submitting it to Play Console / App Store Connect.
+    </div>
+  </section>
+</div>
+
+<footer>
+  © <span id="year"></span> Tejas Labs. All rights reserved.
+</footer>
+
+<script>
+  // Keep the footer year current without needing a manual edit.
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Simple manual dark/light override on top of the OS-level prefers-color-scheme default.
+  (function () {
+    var root = document.documentElement;
+    var toggle = document.getElementById('themeToggle');
+    var stored = null;
+    try { stored = localStorage.getItem('privacyPolicyTheme'); } catch (e) {}
+    if (stored === 'light' || stored === 'dark') {
+      root.setAttribute('data-theme', stored);
+    }
+    toggle.addEventListener('click', function () {
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var current = root.getAttribute('data-theme') || (prefersDark ? 'dark' : 'light');
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('privacyPolicyTheme', next); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>
