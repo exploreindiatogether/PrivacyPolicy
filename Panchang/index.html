@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Hindu Calendar (Panchang)</title>
+<meta name="description" content="Privacy Policy for the Hindu Calendar (Panchang) mobile app.">
+<style>
+  :root {
+    --saffron: #FF8C00;
+    --deep-orange: #E65100;
+    --maroon: #8B0000;
+    --gold: #FFD700;
+    --bg: #FFF8F1;
+    --surface: #FFFFFF;
+    --text: #2A2118;
+    --text-muted: #6B5D4F;
+    --border: #EEE0D0;
+    --toc-bg: #FFF3E4;
+    --code-bg: #F5ECE0;
+    --shadow: 0 2px 10px rgba(139, 0, 0, 0.06);
+    --radius: 14px;
+    --maxw: 880px;
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1A1410;
+    --surface: #241C15;
+    --text: #F1E6D8;
+    --text-muted: #C2AF97;
+    --border: #3A2E22;
+    --toc-bg: #2A2018;
+    --code-bg: #2E2419;
+    --shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1A1410;
+      --surface: #241C15;
+      --text: #F1E6D8;
+      --text-muted: #C2AF97;
+      --border: #3A2E22;
+      --toc-bg: #2A2018;
+      --code-bg: #2E2419;
+      --shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  header.hero {
+    background: linear-gradient(135deg, var(--saffron), var(--deep-orange) 55%, var(--maroon));
+    color: #fff;
+    padding: 48px 20px 64px;
+    text-align: center;
+    position: relative;
+  }
+
+  header.hero .om {
+    font-size: 40px;
+    display: inline-block;
+    width: 76px;
+    height: 76px;
+    line-height: 76px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.16);
+    border: 2px solid rgba(255,255,255,0.35);
+    margin-bottom: 14px;
+  }
+
+  header.hero h1 {
+    margin: 0 0 8px;
+    font-size: clamp(24px, 4vw, 34px);
+  }
+
+  header.hero p {
+    margin: 0;
+    opacity: 0.92;
+    font-size: 14px;
+  }
+
+  .theme-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+  }
+  .theme-toggle:hover { background: rgba(255,255,255,0.28); }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: -36px auto 60px;
+    padding: 0 16px;
+  }
+
+  .card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    padding: 28px 24px;
+  }
+
+  nav.toc {
+    background: var(--toc-bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 18px 22px;
+    margin-bottom: 24px;
+  }
+  nav.toc h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin: 0 0 10px;
+  }
+  nav.toc ol {
+    columns: 2;
+    column-gap: 24px;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+  nav.toc a {
+    color: var(--maroon);
+    text-decoration: none;
+  }
+  :root[data-theme="dark"] nav.toc a { color: var(--gold); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) nav.toc a { color: var(--gold); }
+  }
+  nav.toc a:hover { text-decoration: underline; }
+  nav.toc li { margin-bottom: 6px; }
+  nav.toc li.active > a { font-weight: 700; }
+
+  section.policy-section {
+    padding: 26px 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 20px;
+  }
+  section.policy-section:last-of-type { border-bottom: none; padding-bottom: 4px; }
+
+  h2 {
+    font-size: 19px;
+    color: var(--maroon);
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  :root[data-theme="dark"] h2 { color: var(--gold); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) h2 { color: var(--gold); }
+  }
+
+  h3 { font-size: 15px; margin: 18px 0 8px; color: var(--text); }
+
+  p, li { font-size: 15px; color: var(--text); }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+
+  .muted { color: var(--text-muted); font-size: 13px; }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 13.5px;
+  }
+  table.data-table th, table.data-table td {
+    border: 1px solid var(--border);
+    padding: 9px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  table.data-table th {
+    background: var(--code-bg);
+    font-weight: 700;
+  }
+
+  .placeholder {
+    background: linear-gradient(0deg, rgba(255,215,0,0.28), rgba(255,215,0,0.28));
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: var(--code-bg);
+    color: var(--text-muted);
+    margin-left: 6px;
+  }
+
+  a.inline-link { color: var(--saffron); }
+  :root[data-theme="dark"] a.inline-link { color: var(--gold); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) a.inline-link { color: var(--gold); }
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 16px 50px;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+
+  #backToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: var(--maroon);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 50;
+  }
+  #backToTop.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  #backToTop:hover { background: var(--deep-orange); }
+
+  .print-btn {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 7px 16px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .print-btn:hover { border-color: var(--saffron); color: var(--maroon); }
+
+  .top-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 0 0 14px;
+  }
+
+  @media print {
+    header.hero, nav.toc, .top-actions, #backToTop, .theme-toggle { display: none !important; }
+    .wrap { margin-top: 0; }
+    body { background: #fff; color: #000; }
+  }
+
+  @media (max-width: 620px) {
+    nav.toc ol { columns: 1; }
+    .card { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">🌙 Dark mode</button>
+  <div class="om">🕉️</div>
+  <h1>Privacy Policy</h1>
+  <p>Hindu Calendar (Panchang) &nbsp;•&nbsp; Last updated: <span id="lastUpdated">September 27, 2026</span></p>
+</header>
+
+<div class="wrap">
+  <div class="card">
+
+    <div class="top-actions">
+      <button class="print-btn" id="printBtn" type="button">🖨️ Print / Save as PDF</button>
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol id="tocList">
+        <li><a href="#intro">1. Introduction</a></li>
+        <li><a href="#data-we-collect">2. Information We Collect</a></li>
+        <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+        <li><a href="#third-parties">4. Third-Party Services</a></li>
+        <li><a href="#sharing">5. Data Sharing &amp; Disclosure</a></li>
+        <li><a href="#choices">6. Your Choices &amp; Rights</a></li>
+        <li><a href="#retention">7. Data Retention</a></li>
+        <li><a href="#children">8. Children's Privacy</a></li>
+        <li><a href="#security">9. Security</a></li>
+        <li><a href="#transfers">10. International Data Transfers</a></li>
+        <li><a href="#changes">11. Changes to This Policy</a></li>
+        <li><a href="#contact">12. Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <section class="policy-section" id="intro">
+      <h2>1. Introduction</h2>
+      <p>
+        This Privacy Policy explains how <span class="placeholder">[Developer/Company Legal Name]</span>
+        ("we", "us", "our") collects, uses, and protects information when you use the
+        <strong>Hindu Calendar (Panchang)</strong> mobile application (the "App"), available for Android and iOS.
+      </p>
+      <p>
+        The App provides Hindu Panchang (calendar) details, festival and Vrat (fasting) calendars, Muhurat timings,
+        Kundli, Horoscope, religious content (mantras, aartis, chalisas, kathas), sacred temple information, and
+        related reminders and notifications.
+      </p>
+      <p>By downloading, installing, or using the App, you agree to the collection and use of information as described in this policy.</p>
+    </section>
+
+    <section class="policy-section" id="data-we-collect">
+      <h2>2. Information We Collect</h2>
+      <p>We aim to collect only what is needed to calculate accurate Panchang data and operate the App's features.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Category</th><th>What we collect</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Location</td>
+            <td>City/coordinates you select or search (Saved Locations), or device location if you grant location permission.</td>
+            <td>Panchang, Muhurat, Choghadiya, sunrise/sunset and festival dates are astronomically calculated per location and time zone.</td>
+          </tr>
+          <tr>
+            <td>Anonymous account identifier</td>
+            <td>A randomly generated anonymous user ID (Firebase Anonymous Authentication). We do not require or collect your name, email, or phone number to use the App.</td>
+            <td>Lets your Favorites, custom Reminders, and Premium entitlement sync and persist without creating a traditional account.</td>
+          </tr>
+          <tr>
+            <td>App usage &amp; diagnostics</td>
+            <td>Screen views and in-app events (e.g. Premium screen viewed, purchase started/completed, Panchang shared), via Firebase Analytics.</td>
+            <td>Understand feature usage and improve the App. Analytics data is tied to an anonymous device/analytics identifier, not your name or email.</td>
+          </tr>
+          <tr>
+            <td>Push notification token</td>
+            <td>A device push token (Firebase Cloud Messaging), plus your chosen reminder categories (festival, vrat, muhurat, daily Panchang).</td>
+            <td>Deliver festival, Vrat, and Panchang reminders you opt into.</td>
+          </tr>
+          <tr>
+            <td>Purchase information</td>
+            <td>Product ID and a purchase token/receipt for Premium subscription or "Remove Ads" purchases, verified against Google Play / Apple App Store.</td>
+            <td>Confirm your purchase is genuine and unlock the corresponding Premium features. We never see or store your payment card details — payment is handled entirely by Google Play / Apple App Store.</td>
+          </tr>
+          <tr>
+            <td>Advertising data</td>
+            <td>Advertising identifier and ad interaction data, collected by Google AdMob (for users who have not purchased "Remove Ads"/Premium).</td>
+            <td>Show and measure in-app banner/interstitial ads that support the App's free tier.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="policy-section" id="how-we-use">
+      <h2>3. How We Use Your Information</h2>
+      <ul>
+        <li>Calculate and display Panchang, Festival, Vrat, Muhurat, Kundli, and Horoscope data for your selected location(s).</li>
+        <li>Save your Favorites, custom Reminders, and Saved Locations across app sessions.</li>
+        <li>Send reminder notifications you have explicitly opted into.</li>
+        <li>Verify and grant Premium / "Remove Ads" purchases.</li>
+        <li>Understand feature usage through aggregated, anonymized analytics.</li>
+        <li>Serve advertising to free-tier users, and measure ad performance.</li>
+        <li>Maintain app security, including Firebase App Check verification that requests genuinely originate from this App.</li>
+      </ul>
+      <p>We do <strong>not</strong> use your data to build an advertising profile of you outside of the App, and we do not sell your personal information.</p>
+    </section>
+
+    <section class="policy-section" id="third-parties">
+      <h2>4. Third-Party Services</h2>
+      <p>The App relies on the following third-party service providers, each governed by its own privacy policy:</p>
+      <ul>
+        <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Analytics, App Check, Remote Config) — <a class="inline-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></li>
+        <li><strong>Google AdMob</strong> (advertising) — <a class="inline-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></li>
+        <li><strong>Google Play Billing</strong> / <strong>Apple App Store</strong> (in-app purchases) — payment details are processed entirely by Google/Apple; we only receive a purchase confirmation token.</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="sharing">
+      <h2>5. Data Sharing &amp; Disclosure</h2>
+      <p>We do not sell your personal information. We only share information:</p>
+      <ul>
+        <li>With the service providers listed above, strictly to operate the App's features (hosting, analytics, notifications, advertising, payments).</li>
+        <li>If required by law, legal process, or to protect the rights, safety, and property of us, our users, or the public.</li>
+        <li>In connection with a merger, acquisition, or sale of assets, subject to standard confidentiality obligations.</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="choices">
+      <h2>6. Your Choices &amp; Rights</h2>
+      <ul>
+        <li><strong>Location permission</strong> — you can deny or revoke location access in your device settings at any time; you can still manually search/select a city under Saved Locations.</li>
+        <li><strong>Notifications</strong> — enable or disable each reminder category (festival, vrat, muhurat, daily Panchang) from within the App, or disable all notifications from your device settings.</li>
+        <li><strong>Advertising</strong> — you can reset or limit your device's advertising identifier in your device's OS settings, or remove ads entirely via the "Remove Ads"/Premium purchase.</li>
+        <li><strong>Data deletion</strong> — you can request deletion of the data associated with your anonymous account by contacting us (see Section 12). Uninstalling the App removes all data stored locally on your device.</li>
+        <li><strong>Access/correction</strong> — since we do not collect a name or email, most of your data (Favorites, Reminders, Saved Locations) is directly visible and editable from within the App itself.</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="retention">
+      <h2>7. Data Retention</h2>
+      <p>
+        We retain data associated with your anonymous account for as long as you use the App, or until you request
+        deletion. Cached Panchang/Festival/Vrat calendar data is retained server-side to avoid recomputing the same
+        astronomical data repeatedly, and is periodically cleaned up. Analytics data is retained per Google's
+        standard Firebase Analytics retention settings.
+      </p>
+    </section>
+
+    <section class="policy-section" id="children">
+      <h2>8. Children's Privacy</h2>
+      <p>
+        The App is intended for a general audience and is not directed at children under 13 (or the equivalent
+        minimum age in your jurisdiction). We do not knowingly collect personal information from children. If you
+        believe a child has provided us with personal information, please contact us so we can delete it.
+      </p>
+    </section>
+
+    <section class="policy-section" id="security">
+      <h2>9. Security</h2>
+      <p>
+        We use industry-standard safeguards to protect your information, including Firebase App Check to verify
+        requests originate from a genuine, unmodified copy of the App, and Firestore security rules that restrict
+        each user's data to that user alone. Server-side purchase verification (against the Google Play Developer
+        API / Apple's receipt verification service) protects against fraudulent Premium activation. No method of
+        transmission or storage is 100% secure, and we cannot guarantee absolute security.
+      </p>
+    </section>
+
+    <section class="policy-section" id="transfers">
+      <h2>10. International Data Transfers</h2>
+      <p>
+        Your information is processed on Google Cloud / Firebase infrastructure, which may store and process data
+        in countries other than your own. By using the App, you consent to this transfer, storage, and processing.
+      </p>
+    </section>
+
+    <section class="policy-section" id="changes">
+      <h2>11. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Material changes will be reflected by updating the
+        "Last updated" date at the top of this page. Continued use of the App after changes take effect constitutes
+        acceptance of the revised policy.
+      </p>
+    </section>
+
+    <section class="policy-section" id="contact">
+      <h2>12. Contact Us</h2>
+      <p>If you have questions about this Privacy Policy or your data, contact us at:</p>
+      <p>
+        📧 <span class="placeholder">[insert support email, e.g. support@yourdomain.com]</span><br>
+        🏢 <span class="placeholder">[Developer/Company Legal Name and address, if applicable]</span>
+      </p>
+      <p class="muted">Package name: com.tejaslabs.panchang.hindu.calendar</p>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; <span id="year">2026</span> <span class="placeholder">[Developer/Company Legal Name]</span>. All rights reserved.
+  </footer>
+</div>
+
+<button id="backToTop" type="button" aria-label="Back to top">↑</button>
+
+<script>
+  (function () {
+    "use strict";
+
+    // ---- Theme toggle (persisted per-viewer via localStorage) ----
+    var root = document.documentElement;
+    var toggleBtn = document.getElementById('themeToggle');
+
+    function applyTheme(theme) {
+      if (theme === 'dark' || theme === 'light') {
+        root.setAttribute('data-theme', theme);
+      } else {
+        root.removeAttribute('data-theme');
+      }
+      updateToggleLabel();
+    }
+
+    function currentEffectiveTheme() {
+      var explicit = root.getAttribute('data-theme');
+      if (explicit) return explicit;
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function updateToggleLabel() {
+      var isDark = currentEffectiveTheme() === 'dark';
+      toggleBtn.textContent = isDark ? '☀️ Light mode' : '🌙 Dark mode';
+    }
+
+    try {
+      var saved = localStorage.getItem('privacyPolicyTheme');
+      if (saved) applyTheme(saved);
+      else updateToggleLabel();
+    } catch (e) {
+      updateToggleLabel();
+    }
+
+    toggleBtn.addEventListener('click', function () {
+      var next = currentEffectiveTheme() === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      try { localStorage.setItem('privacyPolicyTheme', next); } catch (e) { /* private mode, ignore */ }
+    });
+
+    // ---- Print button ----
+    document.getElementById('printBtn').addEventListener('click', function () {
+      window.print();
+    });
+
+    // ---- Auto-updating copyright year ----
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ---- Back-to-top button ----
+    var backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 480) backBtn.classList.add('visible');
+      else backBtn.classList.remove('visible');
+    }, { passive: true });
+    backBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ---- Scrollspy: highlight the active section in the table of contents ----
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.policy-section'));
+    var tocLinks = Array.prototype.slice.call(document.querySelectorAll('#tocList a'));
+    var tocItemsByHref = {};
+    tocLinks.forEach(function (a) {
+      tocItemsByHref[a.getAttribute('href')] = a.parentElement;
+    });
+
+    if ('IntersectionObserver' in window && sections.length) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var li = tocItemsByHref['#' + entry.target.id];
+          if (!li) return;
+          if (entry.isIntersecting) {
+            tocLinks.forEach(function (a) { a.parentElement.classList.remove('active'); });
+            li.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+      sections.forEach(function (s) { observer.observe(s); });
+    }
+  })();
+</script>
+
+</body>
+</html>
