@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Touch Grass</title>
+  <meta name="description" content="How the Touch Grass Android app handles your data. Most of it never leaves your phone.">
+  <meta name="theme-color" content="#0F3D2E">
+  <style>
+:root {
+  --bg: #FBFAF7;
+  --surface: #FFFFFF;
+  --ink: #2C2C2A;
+  --muted: #5F5E5A;
+  --subtle: #888780;
+  --line: #E5E3DA;
+  --accent: #1D9E75;
+  --accent-ink: #0F6E56;
+  --accent-soft: #E1F5EE;
+  --danger: #A32D2D;
+  --danger-soft: #FBECEC;
+  --hero-bg: #0F3D2E;
+  --hero-ink: #F1EFE8;
+  --hero-muted: #A8C9BC;
+  --radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111113;
+    --surface: #1C1C1E;
+    --ink: #F1EFE8;
+    --muted: #B4B2A9;
+    --subtle: #888780;
+    --line: #3A3A3C;
+    --accent: #5DCAA5;
+    --accent-ink: #5DCAA5;
+    --accent-soft: #12352A;
+    --danger: #F09595;
+    --danger-soft: #3A1E1E;
+    --hero-bg: #0B2A20;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+a { color: var(--accent-ink); text-underline-offset: 2px; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--accent-soft);
+  padding: 1px 6px;
+  border-radius: 6px;
+  word-break: break-all;
+}
+
+/* Hero */
+.hero { background: var(--hero-bg); color: var(--hero-ink); padding: 48px 0 40px; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.logo {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: rgba(93, 202, 165, 0.15);
+  display: grid; place-items: center; font-size: 22px;
+}
+.brand-name { font-weight: 600; letter-spacing: -0.2px; }
+.hero h1 { margin: 20px 0 6px; font-size: clamp(30px, 5vw, 42px); letter-spacing: -0.8px; line-height: 1.15; }
+.meta { margin: 0; color: var(--hero-muted); font-size: 14px; }
+.lede { max-width: 680px; margin: 18px 0 0; color: var(--hero-ink); opacity: 0.92; }
+
+/* Layout */
+.layout { display: grid; grid-template-columns: 240px 1fr; gap: 48px; padding-top: 40px; padding-bottom: 64px; }
+
+.toc { position: sticky; top: 24px; align-self: start; font-size: 14px; }
+.toc-title { margin: 0 0 8px; font-weight: 600; color: var(--subtle); text-transform: uppercase; font-size: 12px; letter-spacing: 0.6px; }
+.toc ol { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.toc a {
+  display: block; padding: 5px 0 5px 14px; margin-left: -2px;
+  color: var(--muted); text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.toc a:hover { color: var(--ink); }
+.toc a.active { color: var(--accent-ink); border-left-color: var(--accent); font-weight: 500; }
+
+/* Content */
+.content { min-width: 0; }
+.content section { padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+.content section:last-child { border-bottom: 0; }
+.content h2 { font-size: 24px; letter-spacing: -0.3px; margin: 0 0 12px; }
+.content h3 { font-size: 17px; margin: 22px 0 6px; }
+.content p, .content li { color: var(--muted); }
+.content strong { color: var(--ink); }
+.content ul, .content ol { padding-left: 22px; }
+.content li { margin: 6px 0; }
+
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
+.card h3 { margin: 0 0 6px; font-size: 15px; }
+.card ul { list-style: none; padding: 0; margin: 0; }
+.card li { position: relative; padding-left: 24px; font-size: 14.5px; }
+.card li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
+.card.ok h3 { color: var(--accent-ink); }
+.card.ok li::before { content: "✓"; color: var(--accent); }
+.card.no h3 { color: var(--danger); }
+.card.no li::before { content: "✕"; color: var(--danger); }
+
+.note {
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-size: 14.5px;
+}
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+th, td { text-align: left; padding: 12px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--subtle); }
+td:first-child { color: var(--ink); font-weight: 500; width: 34%; }
+td { color: var(--muted); }
+.tag {
+  display: inline-block; margin-left: 4px;
+  font-size: 11px; font-weight: 500;
+  padding: 1px 7px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent-ink);
+}
+
+.contact-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
+.contact-card p { margin: 4px 0; }
+
+.copy {
+  margin-left: 8px;
+  font: inherit; font-size: 12px; font-weight: 500;
+  padding: 3px 10px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+  cursor: pointer;
+}
+.copy:hover { border-color: var(--accent); }
+.copy.copied { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--subtle); font-size: 14px; }
+.footer p { margin: 0; }
+
+.to-top {
+  position: fixed; right: 16px; bottom: 16px;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 0; background: var(--accent); color: #fff;
+  font-size: 20px; cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  opacity: 0; pointer-events: none; transform: translateY(8px);
+  transition: opacity .2s, transform .2s;
+}
+.to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; gap: 24px; padding-top: 24px; }
+  .toc { position: static; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+  .toc ol { border-left: 0; columns: 2; column-gap: 16px; }
+  .toc a { padding: 4px 0; margin: 0; border: 0; }
+  .toc a.active { border: 0; }
+}
+
+@media (max-width: 560px) {
+  .hero { padding: 36px 0 30px; }
+  .cards { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  td:first-child { width: 40%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+@media print {
+  .toc, .to-top, .copy { display: none !important; }
+  .hero { background: none; color: #000; }
+  .layout { display: block; }
+}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">🌱</span>
+        <span class="brand-name">Touch Grass</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective date: <time datetime="2026-10-21">October 21, 2026</time> · Last updated: <time datetime="2026-10-21">October 21, 2026</time></p>
+      <p class="lede">Short version: Touch Grass helps you spend less time on your phone. It mostly runs on your device and does <strong>not</strong> read what's inside your apps. It sends only the small amount of data needed to check your purchases and to understand how the paywall is used.</p>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <nav class="toc" aria-label="Contents">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#summary">At a glance</a></li>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#on-device">Data that stays on your device</a></li>
+        <li><a href="#permissions">Permissions and why we need them</a></li>
+        <li><a href="#collected">Data we collect</a></li>
+        <li><a href="#third-parties">Third-party services</a></li>
+        <li><a href="#sharing">How we share data</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#choices">Your choices and rights</a></li>
+        <li><a href="#deletion">Deleting your data</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <article class="content">
+      <section id="summary">
+        <h2>At a glance</h2>
+        <div class="cards">
+          <div class="card ok">
+            <h3>What we see</h3>
+            <ul>
+              <li>Which app opened, and when (for example, "Instagram opened at 11:42"). This stays on your device.</li>
+              <li>Purchase details, so we can unlock Pro</li>
+              <li>Basic, anonymous paywall events</li>
+            </ul>
+          </div>
+          <div class="card no">
+            <h3>What we never see</h3>
+            <ul>
+              <li>Your messages, feeds, photos or anything inside other apps</li>
+              <li>Photos you take for the photo challenge (checked on your device, then thrown away)</li>
+              <li>Your name, email address, contacts or location</li>
+            </ul>
+          </div>
+        </div>
+        <p>We do not sell your personal data. We do not show ads.</p>
+      </section>
+
+      <section id="who">
+        <h2>Who we are</h2>
+        <p>Touch Grass (package <code>com.tejaslabs.touchgrass</code>) is made by <strong>Tejas Labs</strong> ("we", "us", "our"). This policy explains what information the Touch Grass Android app ("the app") handles, why it handles it, and the choices you have.</p>
+      </section>
+
+      <section id="on-device">
+        <h2>Data that stays on your device</h2>
+        <p>The app works by itself on your phone. The following is stored only in the app's private storage and is <strong>never uploaded to our servers</strong>:</p>
+        <ul>
+          <li><strong>App usage statistics:</strong> which apps you use and for how long. We read these through Android's Usage Access to show your screen time and to notice when you open an app you've chosen to guard.</li>
+          <li><strong>Your settings:</strong> the apps you guard, the challenges you choose, your language and other preferences.</li>
+          <li><strong>Block history and stats:</strong> when a block screen appeared, which challenge you completed, and your streaks.</li>
+          <li><strong>Step counts:</strong> counted during a walking challenge only, using your phone's step sensor.</li>
+          <li><strong>Photo challenge images:</strong> analysed in your phone's memory by a machine-learning model built into the app. They are never saved to your gallery and never uploaded.</li>
+        </ul>
+        <p class="note">If Android backup is on for your device, Android may include the app's local data in your personal Google backup. Google handles that backup under its own policies. We cannot see or access it.</p>
+      </section>
+
+      <section id="permissions">
+        <h2>Permissions and why we need them</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Permission</th><th>Why we use it</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Usage access</td><td>To see which app is in front and how long you used apps, so we can show the block screen and your stats. We see app names and times, never what's inside the app.</td></tr>
+              <tr><td>Display over other apps</td><td>To show the block screen on top of an app you've chosen to guard.</td></tr>
+              <tr><td>Camera <span class="tag">optional</span></td><td>Only for the photo challenge. Photos are checked on your device and thrown away right after.</td></tr>
+              <tr><td>Physical activity <span class="tag">optional</span></td><td>Only for the walking challenge, to count your steps on the device.</td></tr>
+              <tr><td>Notifications</td><td>To show the ongoing "guarding" notification and reminders.</td></tr>
+              <tr><td>Foreground service, run at startup, ignore battery optimisation, wake lock</td><td>To keep guarding your chosen apps reliably, including after your phone restarts.</td></tr>
+              <tr><td>Query installed apps</td><td>To list your apps so you can choose which ones to guard. This list never leaves your device.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>You can turn off any permission at any time in Android Settings. Some features stop working without the permission they need.</p>
+      </section>
+
+      <section id="collected">
+        <h2>Data we collect</h2>
+        <p>We collect a small amount of data, for these purposes only:</p>
+        <h3>1. Anonymous app identifier</h3>
+        <p>When you first open the app, it signs in <strong>anonymously</strong> through Firebase Authentication. This creates a random ID that is not linked to your name, email or Google account. We use it only to tie your Pro purchase to your installation.</p>
+        <h3>2. Purchase information</h3>
+        <p>If you buy Touch Grass Pro, Google Play handles the payment. <strong>We never receive your card or payment details.</strong> To confirm that a purchase is real, the app sends the Google Play purchase token and product ID to our server. The server checks them with Google Play and stores:</p>
+        <ul>
+          <li>your anonymous ID, the product ID and the purchase token</li>
+          <li>whether the purchase is valid, its expiry date and whether it auto-renews</li>
+          <li>the verification response from Google Play and the time it was checked</li>
+        </ul>
+        <h3>3. Analytics (paywall events)</h3>
+        <p>We use Firebase Analytics to understand how people use the upgrade screen. We record events such as "paywall viewed", "checkout started", "purchase completed" and "purchase check failed", along with the product and billing period, and whether you have Pro. Firebase may also collect standard device information, such as device model, OS version, app version, country (from your IP address) and an app-instance ID.</p>
+        <p>We do <strong>not</strong> send your app usage, guarded apps, stats, photos or steps to analytics.</p>
+        <h3>4. Remote configuration</h3>
+        <p>The app downloads settings, such as the list of available Pro plans, from Firebase Remote Config. This request includes basic technical information, such as an app-instance ID, which Firebase needs to deliver the settings.</p>
+        <h3>5. Things you choose to send us</h3>
+        <ul>
+          <li><strong>Feedback:</strong> if you use "Help &amp; feedback", your email app opens with your message. We receive whatever you send, including your email address.</li>
+          <li><strong>Sharing stats:</strong> if you share a stats card, an image is created on your device and passed to the app you pick. We don't receive it.</li>
+        </ul>
+      </section>
+
+      <section id="third-parties">
+        <h2>Third-party services</h2>
+        <p>These services process data for us under their own privacy policies:</p>
+        <ul class="links">
+          <li><strong>Google Play Billing:</strong> payments and subscriptions. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+          <li><strong>Firebase</strong> (Authentication, Analytics, Remote Config, Cloud Functions, Firestore) by Google. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a></li>
+        </ul>
+      </section>
+
+      <section id="sharing">
+        <h2>How we share data</h2>
+        <p>We do not sell or rent your data, and we do not share it for advertising. We share data only:</p>
+        <ul>
+          <li>with the service providers listed above, so the app can work</li>
+          <li>when the law requires it, or to protect our rights, our users or the public</li>
+          <li>with a new owner if Tejas Labs or the app is sold or merged, under the same protections described here</li>
+        </ul>
+      </section>
+
+      <section id="retention">
+        <h2>Data retention</h2>
+        <ul>
+          <li><strong>On-device data</strong> stays until you clear the app's data or uninstall the app.</li>
+          <li><strong>Purchase records</strong> are kept while your purchase or subscription is active, and afterwards for as long as we reasonably need them for accounting, refunds, fraud prevention or legal reasons.</li>
+          <li><strong>Analytics data</strong> is kept under Firebase's retention settings, which are no longer than 14 months.</li>
+          <li><strong>Feedback emails</strong> are kept for as long as we need them to help you.</li>
+        </ul>
+      </section>
+
+      <section id="security">
+        <h2>Security</h2>
+        <p>Data sent between the app and our servers is encrypted with HTTPS. Our purchase database is locked so that apps cannot read or write to it directly. Only our verification server can. No method of storing or sending data is 100% secure, but we work to protect your information.</p>
+      </section>
+
+      <section id="choices">
+        <h2>Your choices and rights</h2>
+        <ul>
+          <li>Turn off any permission in Android Settings at any time.</li>
+          <li>Reset your advertising and app-instance identifiers in Android's Google settings.</li>
+          <li>Clear the app's data or uninstall it to remove everything stored on your device.</li>
+          <li>Manage or cancel subscriptions in Google Play → Payments &amp; subscriptions.</li>
+        </ul>
+        <p>Depending on where you live (for example, under the GDPR, the UK GDPR, the CCPA/CPRA or India's DPDP Act), you may have the right to access, correct, delete or move your personal data, and to object to or restrict how it is processed. Where the GDPR applies, our legal bases are: performing our contract with you (purchases), our legitimate interests (keeping the app working and improving it), and your consent (where required). To use any of these rights, contact us at the address below.</p>
+      </section>
+
+      <section id="deletion">
+        <h2>Deleting your data</h2>
+        <p>Touch Grass has no traditional account. To delete your data:</p>
+        <ol>
+          <li><strong>On your device:</strong> uninstall the app, or go to Settings → Apps → Touch Grass → Storage → Clear data.</li>
+          <li><strong>On our servers:</strong> email <a class="email" href="mailto:support@touchgrass.app?subject=Data%20deletion%20request">support@touchgrass.app</a> with the subject "Data deletion request". If you can, include your Google Play order ID (it starts with <code>GPA.</code>) so we can find your purchase record. We will delete your anonymous ID and purchase records within 30 days, except for anything we must keep by law, such as transaction records for tax purposes.</li>
+        </ol>
+        <p class="note">Deleting your data does not cancel an active subscription. Cancel it in Google Play first.</p>
+      </section>
+
+      <section id="children">
+        <h2>Children</h2>
+        <p>Touch Grass is not directed at children under 13 (or the minimum age where you live). We do not knowingly collect personal information from children. If you believe a child has given us personal information, contact us and we will delete it.</p>
+      </section>
+
+      <section id="changes">
+        <h2>Changes to this policy</h2>
+        <p>We may update this policy from time to time. When we do, we will change the "Last updated" date at the top. For significant changes, we will also tell you in the app or on our Play Store listing.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact us</h2>
+        <p>Questions about privacy? We're happy to help.</p>
+        <div class="contact-card">
+          <p><strong>Tejas Labs</strong></p>
+          <p>Email: <a class="email" href="mailto:support@touchgrass.app">support@touchgrass.app</a>
+            <button class="copy" type="button" data-copy="support@touchgrass.app" aria-label="Copy email address">Copy</button>
+          </p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Tejas Labs · Touch Grass. Go outside. 🌿</p>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top">↑</button>
+  <script>
+(function () {
+  // Footer year
+  var year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  // Highlight the table-of-contents entry for the section in view
+  var links = Array.prototype.slice.call(document.querySelectorAll(".toc a"));
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove("active"); });
+        var link = byId[entry.target.id];
+        if (link) link.classList.add("active");
+      });
+    }, { rootMargin: "-20% 0px -70% 0px" });
+
+    document.querySelectorAll(".content section[id]").forEach(function (s) { observer.observe(s); });
+  }
+
+  // Back-to-top button
+  var toTop = document.querySelector(".to-top");
+  if (toTop) {
+    var onScroll = function () { toTop.classList.toggle("show", window.scrollY > 600); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    toTop.addEventListener("click", function () { window.scrollTo({ top: 0 }); });
+  }
+
+  // Copy email to clipboard
+  document.querySelectorAll(".copy[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.getAttribute("data-copy");
+      var done = function () {
+        btn.textContent = "Copied";
+        btn.classList.add("copied");
+        setTimeout(function () {
+          btn.textContent = "Copy";
+          btn.classList.remove("copied");
+        }, 1600);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done, function () {});
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  });
+})();
+  </script>
+</body>
+</html>
